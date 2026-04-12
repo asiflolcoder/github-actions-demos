@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello Step
-        run: echo "Hello Asif From Github Actions"
-        
+        run: |
+          echo "Hello Multi step command"
+          name="Asif"
+          echo "My name is $name"
   
