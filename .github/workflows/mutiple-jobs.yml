@@ -11,6 +11,7 @@ jobs:
           echo "A demo build"
 
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name : Test step
@@ -18,6 +19,7 @@ jobs:
           echo "Test cases passed"
 
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Deploy step
