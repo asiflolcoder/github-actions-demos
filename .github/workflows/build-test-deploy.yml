@@ -1,0 +1,25 @@
+name: Build-test-deploy
+on: workflow_dispatch
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build-step
+        run: echo "The step is building"
+
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name : test-step
+        run: |
+          echo "Test is running"
+          echo "Test completed"
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy-step
+        run: |
+          echo "Deployment started"
+      
+        
+        
