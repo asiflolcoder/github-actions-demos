@@ -1,0 +1,10 @@
+#this is a simple workflow to print hello asif message
+name: Hello-asif
+on: workflow_dispatch
+jobs:
+  hello-asif:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello step
+        run: 
+          echo "Hello Asif"
