@@ -42,5 +42,10 @@ jobs:
       #print environment variable
       - name: Print env
         run: echo "$CUSTOM_MESSAGE"
+
+      #executing on condition
+      - name: Conditional step
+        if: github.event_name == 'push'
+        run: echo "This was triggered by a push event"
         
           
