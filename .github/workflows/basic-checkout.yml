@@ -7,6 +7,8 @@ on:
 jobs:
   basic-checkout:
     runs-on: ubuntu-latest
+    env:
+      CUSTOM_MESSAGE: "Hello from GitHub Actions!"
     steps:
       #checkout the repository
       - name: Checkout repository
@@ -29,4 +31,16 @@ jobs:
           echo "Node version: $(node --version)"
           echo "Python version: $(python --version)"
           echo "Git version: $(git --version)"
-      
+
+      #more information
+      - name: Show more info
+        run: |
+          echo "Current Date:$(date)"
+          echo "Available Disk Space:$(df -h)"
+          echo "Memory Usage:$(free -m)"
+
+      #print environment variable
+      - name: Print env
+        run: echo "$CUSTOM_MESSAGE"
+        
+          
