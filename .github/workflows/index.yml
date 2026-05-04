@@ -1,0 +1,11 @@
+name: Index Action
+on: push
+jobs:
+  action-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+        
+      - name: Print index file
+        run: cat index.html
